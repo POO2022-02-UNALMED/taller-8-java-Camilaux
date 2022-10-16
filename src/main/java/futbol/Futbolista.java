@@ -1,11 +1,11 @@
 package futbol;
 
-public abstract class Futbolista implements Comparable<Futbolista>{
+public abstract class Futbolista implements Comparable<Object>{
     private String nombre;
     private int edad;
     private final String posicion ;
 
-    public Futbolista(String nombre, int edad, final String posicion){
+    public Futbolista(String nombre, int edad, String posicion){
         this.nombre = nombre;
         this.edad = edad;
         this.posicion = posicion;
@@ -29,13 +29,6 @@ public abstract class Futbolista implements Comparable<Futbolista>{
 
     public abstract boolean jugarConLasManos();
 
-    public int compareTo(Futbolista futbolista){
-        if(this.nombre == futbolista.getNombre() ){
-            return 0;
-        }
-        else return 1;
-    }
-
     public void setEdad(int edad) {
         this.edad = edad;
     }
@@ -46,7 +39,6 @@ public abstract class Futbolista implements Comparable<Futbolista>{
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
     public String getNombre() {
         return nombre;
     }

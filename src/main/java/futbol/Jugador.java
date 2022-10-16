@@ -10,17 +10,16 @@ public class Jugador extends Futbolista {
         this.dorsal = dorsal;
     }
 
-
-    public int compareTo(Jugador jugador) {
-        int abs = Math.abs(this.getEdad() - jugador.getEdad());
-        return abs;
-    }
-
     public Jugador (){
         super();
         golesMarcados = 289;
         dorsal = 7;
+    }
 
+    public int compareTo(Object elemento) {
+        Jugador jugador = (Jugador) elemento;
+        int abs = Math.abs(this.getEdad() - jugador.getEdad());
+        return abs;
     }
 
     @Override
